@@ -1,0 +1,28 @@
+# https://kubernetes.io/docs/concepts/configuration/configmap/
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: banking-cm
+  namespace: default
+data:
+  CONFIG_SERVER_URL: "http://config-server-svc:9296"
+  ACCOUNTS_URL: "http://accounts-svc:8081/"
+  CARDS_URL: "http://cards-svc:8082/"
+  DB_HOST: "banking-db.cyuanxrjfhqn.ap-south-1.rds.amazonaws.com"
+
+
+---
+
+# https://kubernetes.io/docs/concepts/configuration/secret/
+apiVersion: v1
+kind: Secret
+metadata:
+  name: banking-sc
+  namespace: default
+type: Opaque
+data:
+  DB_USER_NAME: YWRtaW4=
+  DB_PASSWORD: YmFua2luZ3B3ZA==
+  
+
+

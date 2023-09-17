@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cards
+  labels:
+    app: cards
+spec:
+  selector:
+   matchLabels:
+     app: cards
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cards
+    spec:
+      containers:
+      - name: cards
+        image: asia-docker.pkg.dev/endless-ability-398915/banking-repo/cards-service:0.0.1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8082
+        env:
+        - name: DB_USER_NAME
+          valueFrom:
+            secretKeyRef:
+              name: banking-sc
+              key:  DB_USER_NAME
+        - name: DB_PASSWORD
+          valueFrom: 
+            secretKeyRef:
+              name: banking-sc
+              key: DB_PASSWORD
+        - name: DB_HOST
+          valueFrom: 
+            configMapKeyRef:
+              name: banking-cm
+              key: DB_HOST
+        - name: CONFIG_SERVER_URL
+          valueFrom: 
+            configMapKeyRef:
+              name: banking-cm
+              key: CONFIG_SERVER_URL
+      imagePullSecrets:
+        - name: gcr-json-key
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cards-svc
+spec:
+  selector:
+    app: cards
+  type: LoadBalancer  
+  ports:
+    - protocol: TCP
+      port: 8082
+      targetPort: 8082
+      

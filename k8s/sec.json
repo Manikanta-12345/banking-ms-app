@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "endless-ability-398915",
+  "private_key_id": "b807c3e18cce26479e162ef3c30fa07de6559380",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDiW2gOHFAZwwfN\nEh0tvCdy94zU6KjqlXK1H1Ec6YvyAbYv0z24gKfrOja0FCqd7pdu5ewLr/mFW6Rw\n0SIA+mLUs9xf7WgBBeftsixEfa80XBNhIJehlwfvR94cLA/Gir68xx6dZiN17cin\nSnwsuSNiT+nNFeDXY/WGWdd8WRFNuEuuckw3ISk2RxqBvPUgxgrtsN8h4aR2SBkv\nn7LWbTPyfE8qxBaNGxqBgqwhD0XRyQzIOifswfz5g9LOvJ1IeZ2d9BgxWG+V8XTY\npuUlUDNQjL4getqj/R6JsTyApZCw/7sxaYjjHnUvWoR/haXGxSu1y3JbK6mHdyCt\ncqrv6QkpAgMBAAECggEAEE0/R141oe1Vp1NfI5c8i2nq9r28xeGLzcyFaxzMwISW\ntNy0l2WN8lcSb9H7Ub1y+CskiUub9O/pKLDUZJf5EdLUPlpa1lFbvIF2RlvQ3ZH7\nWVA0wLqfo9VxWGZkn8qykDuSPQlek2nTvMHqAySK46ktWuDw/OzM1ryrVArBasSG\nN7pr+BIrlveKr4nJabketZk1Hm5JzAUWrux7ZJsd7+Cs5+1WXcEw49ibm5kUasdr\nGZf8VLV/NOT1mVyi+M1J/U4A2X1dZENth8n0NRftcgyKDJQDP6eCCSIEQk8/le5N\n/zPg4rI71xIu+MI1ytCKFej3hSsr9GF6ltMS+lu5MwKBgQD1C7DsBAf+0t85mTv9\nSWZ/GZZThZpXgnZqlxXkOUU/G6bvoDJDAzispbw+DLTs2obOPI71Cs43bpu7fzMh\ncFG9iPZPb2G69xcjuUnwyEMJ1BivvIF4OnM3b9TwTEIXnvTGTbkHp6zlWJRtogtN\npx+UhhHuxktal52CQ8OHH2RhdwKBgQDsedeoSv39985fkgxIv2Evoxy0AIty5zSj\ns7+WDkMqAMEZd7xFSpNACIy40/qYr76H7jnMNyBMLeLrrQhbuFI/WRttNhilzBbL\ntZ2W/PWXz1mJdkIqLNu0BvSRCNona/WSeyQhBE/gmklovgujpn6gB7hsiBVbTPSM\n2ZkOo0WSXwKBgG9BVpthnSuyHA1vqA/wkmukd18GarPOlOsCG7tZ0Tm82Uc0iX1p\nagLg4J2fcUmUUd4zGojg1g3O10ACmXlWIJaYJ5SbMlkLtGLQzmRW2DEPLgIj6Pho\nOUVzLc/IH73PuryKLzbthw89723zQ4SHG0x4ro2lVDMWYTnygETKGO4zAoGBANiJ\nXYOaX+ftwUjcKGl47Vo8pyzgjtDBi/8WuimCl9ffZvKWJIzik+F/srQQT5j+3J4F\n82DfXbDEF9Us1cl/B7lANBAWCA3Ry1Hv1QUMTysa0GdCJaYO+4NnFw2zqGeOwQjH\nv7aIB0ionu3NkETjUXHif+rJ1ZyL5CcRnci8kxlLAoGBAKa8S3b1UskQMMgoWYdn\nHByuV98+AExcS8LCfDvSkC3Pk6Oel1zaST40S5YL62x6KUmpRMlDK6SVNNGpu6Px\nJ0GUGra3uDkatpUw10Qre1Cml7ZI3jDS74qWWFBAGVW3orBL4NlQtqylA8QyKHfh\nH9R6s2mNLS8Xae3cQnOs+zGh\n-----END PRIVATE KEY-----\n",
+  "client_email": "banking-svc@endless-ability-398915.iam.gserviceaccount.com",
+  "client_id": "112829429969489425978",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/banking-svc%40endless-ability-398915.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

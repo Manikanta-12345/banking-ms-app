@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: configserver-app
+  labels:
+    app: configserver-app
+spec:
+  selector:
+   matchLabels:
+     app: configserver-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: configserver-app
+    spec:
+      containers:
+      - name: configserver-app
+        image: asia-docker.pkg.dev/endless-ability-398915/banking-repo/configserver-app:0.0.1
+        ports:
+         - containerPort: 9296
+      imagePullSecrets:
+        - name: gcr-json-key
+      
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: config-server-svc
+spec:
+  selector:
+    app: configserver-app
+  type: ClusterIP  
+  ports:
+    - protocol: TCP
+      port: 9296
+      targetPort: 9296
+      

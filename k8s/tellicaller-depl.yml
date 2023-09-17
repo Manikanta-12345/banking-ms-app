@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tellicaller
+  labels:
+    app: tellicaller
+spec:
+  selector:
+   matchLabels:
+     app: tellicaller
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: tellicaller
+    spec:
+      containers:
+      - name: cards
+        image: asia-docker.pkg.dev/endless-ability-398915/banking-repo/tellicaller-service:0.0.1
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8081
+        env:
+        - name: ACCOUNTS_URL
+          valueFrom: 
+            configMapKeyRef:
+              name: banking-cm
+              key: ACCOUNTS_URL
+        - name: CARDS_URL
+          valueFrom: 
+            configMapKeyRef:
+              name: banking-cm
+              key: CARDS_URL
+        - name: CONFIG_SERVER_URL
+          valueFrom: 
+            configMapKeyRef:
+              name: banking-cm
+              key: CONFIG_SERVER_URL
+      imagePullSecrets:
+        - name: gcr-json-key
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tellicaller-svc
+spec:
+  selector:
+    app: tellicaller
+  type: LoadBalancer  
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      
